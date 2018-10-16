@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PDE-uE-Xhg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Medium</string>
+        </array>
+        <array key="Georgia.ttf">
+            <string>Georgia</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Onboarding Page View Controller-->
+        <scene sceneID="JGY-mY-npA">
+            <objects>
+                <pageViewController storyboardIdentifier="OnboardingPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="PDE-uE-Xhg" customClass="OnboardingPageViewController" customModule="CleanArchitectureWithCoordinatorPatternDemo" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XPf-Pw-0fI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-892" y="134"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="hq4-Kt-Oqa">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="nK2-c7-iOy" customClass="OnboardingViewController" customModule="CleanArchitectureWithCoordinatorPatternDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KNq-70-9F4"/>
+                        <viewControllerLayoutGuide type="bottom" id="UAR-Pn-Vkl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q37-Qp-ZQP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WmO-hz-qIr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="neX-4G-hIe">
+                                <rect key="frame" x="168" y="571" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="28n-zq-LSx"/>
+                                    <constraint firstAttribute="width" constant="40" id="9zq-58-t6f"/>
+                                </constraints>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycb-pq-58Q">
+                                <rect key="frame" x="106" y="495" width="162" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="2uD-37-59G"/>
+                                    <constraint firstAttribute="width" constant="162" id="Sk0-jF-mfQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="GO MARVEL!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goMarvelPressed:" destination="nK2-c7-iOy" eventType="touchUpInside" id="4MA-Dx-jdv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXd-bU-Sk4">
+                                <rect key="frame" x="301" y="28" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Crt-g2-OVr"/>
+                                    <constraint firstAttribute="width" constant="50" id="iDn-fE-eD9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                <state key="normal" title="Info">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="infoPressed:" destination="nK2-c7-iOy" eventType="touchUpInside" id="R5j-o2-wLt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WmO-hz-qIr" secondAttribute="trailing" id="1hv-dS-Krs"/>
+                            <constraint firstItem="WmO-hz-qIr" firstAttribute="top" secondItem="q37-Qp-ZQP" secondAttribute="top" id="3PY-4o-xCa"/>
+                            <constraint firstItem="UAR-Pn-Vkl" firstAttribute="top" secondItem="WmO-hz-qIr" secondAttribute="bottom" id="3sR-V1-BfF"/>
+                            <constraint firstItem="neX-4G-hIe" firstAttribute="centerX" secondItem="q37-Qp-ZQP" secondAttribute="centerX" id="449-vt-H6l"/>
+                            <constraint firstItem="neX-4G-hIe" firstAttribute="centerY" secondItem="q37-Qp-ZQP" secondAttribute="centerY" constant="257" id="BQB-nA-MGw"/>
+                            <constraint firstItem="neX-4G-hIe" firstAttribute="top" secondItem="ycb-pq-58Q" secondAttribute="bottom" constant="10" id="C3G-D9-YVU"/>
+                            <constraint firstItem="dXd-bU-Sk4" firstAttribute="top" secondItem="KNq-70-9F4" secondAttribute="bottom" constant="8" id="HoA-OX-EDR"/>
+                            <constraint firstItem="ycb-pq-58Q" firstAttribute="centerX" secondItem="WmO-hz-qIr" secondAttribute="centerX" id="taq-lN-fGu"/>
+                            <constraint firstItem="WmO-hz-qIr" firstAttribute="leading" secondItem="q37-Qp-ZQP" secondAttribute="leading" id="vvN-je-S8s"/>
+                            <constraint firstAttribute="trailing" secondItem="dXd-bU-Sk4" secondAttribute="trailing" constant="24" id="yUV-2P-UsB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="goMarvelButton" destination="ycb-pq-58Q" id="QlM-g9-Cf3"/>
+                        <outlet property="imageView" destination="WmO-hz-qIr" id="qHn-Rz-q6m"/>
+                        <outlet property="pageControl" destination="neX-4G-hIe" id="zKO-mb-7AL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qTc-bU-6K3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-172" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
